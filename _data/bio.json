@@ -2,7 +2,7 @@
   "basics": {
     "name": "Hafiz Ramadhan",
     "label": "Student",
-    "picture": "https://rmdhfz.github.io/images/hafizGoogle.jpeg",
+    "picture": "https://rmdhfz.github.io/images/KPKOfficeMeeting.jpg",
     "email": "hfzrmd@gmail.com",
     "phone": "+62-838-1995-4386",
     "website": "https://rmdhfz.github.io",
@@ -33,6 +33,11 @@
     ]
   },
   "interests": [
+    {
+      "name": "Programming",
+      "keywords": [
+      ]
+    },
     {
       "name": "internet of things",
       "keywords": [
@@ -79,10 +84,8 @@
         "Ubuntu",
         "CentOS",
         "Git/GitHub",
-        "g++",
-        "tilix",
-        "zsh",
         "SQLmap",
+        "",
       ]
     }
   ],
