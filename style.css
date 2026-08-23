@@ -745,4 +745,22 @@ main {
     }
 }
 
+/* Language Toggle Logic */
+:root:not([lang="id"]) .lang-id { display: none !important; }
+:root[lang="id"] .lang-en { display: none !important; }
 
+.lang-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    transition: all 0.2s ease;
+}
+.lang-btn:hover, .lang-btn.active {
+    color: var(--accent-primary);
+    border-color: var(--accent-primary);
+}

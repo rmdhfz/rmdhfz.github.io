@@ -16,6 +16,27 @@
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
 
+    <!-- Language Detection Script -->
+    <script>
+        (function() {
+            try {
+                const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                const lang = navigator.language || navigator.userLanguage;
+                const savedLang = localStorage.getItem('pref-lang');
+                
+                if (savedLang) {
+                    document.documentElement.lang = savedLang;
+                } else if (tz === 'Asia/Jakarta' || tz === 'Asia/Makassar' || tz === 'Asia/Jayapura' || tz === 'Asia/Pontianak' || lang.startsWith('id')) {
+                    document.documentElement.lang = 'id';
+                } else {
+                    document.documentElement.lang = 'en';
+                }
+            } catch (e) {
+                document.documentElement.lang = 'en';
+            }
+        })();
+    </script>
+
     <!-- Open Graph / SEO Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rmdhfz.github.io/">
@@ -84,13 +105,14 @@
         <div class="nav-container">
             <a href="#" class="logo">HR<span class="dot">.</span></a>
             <ul class="nav-links">
-                <li><a href="#about">Pendidikan</a></li>
-                <li><a href="#experience">Pengalaman</a></li>
-                <li><a href="#projects">Proyek</a></li>
-                <li><a href="#skills">Kemampuan</a></li>
-                <li><a href="#certifications">Sertifikasi</a></li>
+                <li><a href="#about"><span class="lang-id">Pendidikan</span><span class="lang-en">Education</span></a></li>
+                <li><a href="#experience"><span class="lang-id">Pengalaman</span><span class="lang-en">Experience</span></a></li>
+                <li><a href="#projects"><span class="lang-id">Proyek</span><span class="lang-en">Projects</span></a></li>
+                <li><a href="#skills"><span class="lang-id">Kemampuan</span><span class="lang-en">Skills</span></a></li>
+                <li><a href="#certifications"><span class="lang-id">Sertifikasi</span><span class="lang-en">Certifications</span></a></li>
             </ul>
             <div class="nav-controls">
+                <button id="lang-toggle" class="lang-btn" aria-label="Toggle Language">ID / EN</button>
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
                     <i class="fas fa-sun"></i>
                 </button>
@@ -112,9 +134,8 @@
                         <span class="typing-text"></span><span class="cursor">&nbsp;</span>
                     </h2>
                     <p class="summary">
-                        Dengan 8 tahun pengalaman di bidang Internet Service Provider. Memiliki keahlian mendalam dalam
-                        <strong>software development</strong>, <strong>cyber security</strong>, dan
-                        <strong>infrastruktur</strong>.
+                        <span class="lang-id">Dengan 8 tahun pengalaman di bidang Internet Service Provider. Memiliki keahlian mendalam dalam <strong>software development</strong>, <strong>cyber security</strong>, dan <strong>infrastruktur</strong>.</span>
+                        <span class="lang-en">With 8 years of experience in the Internet Service Provider industry. Having deep expertise in <strong>software development</strong>, <strong>cyber security</strong>, and <strong>infrastructure</strong>.</span>
                     </p>
                     <div class="contact-info">
                         <a href="mailto:hfzrmd@gmail.com" target="_blank" class="contact-link"
@@ -124,12 +145,12 @@
                             title="LinkedIn Hafiz Ramadhan"><i class="fab fa-linkedin"></i> linkedin.com/in/hfzrmd</a>
                         <a href="https://github.com/rmdhfz" target="_blank" class="contact-link"
                             title="GitHub Hafiz Ramadhan"><i class="fab fa-github"></i> github.com/rmdhfz</a>
-                        <span class="contact-location"><i class="fas fa-map-marker-alt"></i> Bogor, Jawa Barat</span>
+                        <span class="contact-location"><i class="fas fa-map-marker-alt"></i> Bogor, <span class="lang-id">Jawa Barat</span><span class="lang-en">West Java</span></span>
                     </div>
                     <div class="cta-buttons">
-                        <a href="#experience" class="btn btn-primary">Lihat Pengalaman</a>
+                        <a href="#experience" class="btn btn-primary"><span class="lang-id">Lihat Pengalaman</span><span class="lang-en">View Experience</span></a>
                         <a href="CV%20-%20Hafiz%20Ramadhan%20-%202026.pdf" target="_blank" class="btn btn-secondary"><i
-                                class="fas fa-file-pdf"></i> Download CV PDF</a>
+                                class="fas fa-file-pdf"></i> Download CV (PDF)</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -143,7 +164,7 @@
         <!-- Education -->
         <section id="about" class="section">
             <div class="section-header">
-                <h2>Pendidikan</h2>
+                <h2><span class="lang-id">Pendidikan</span><span class="lang-en">Education</span></h2>
                 <div class="line"></div>
             </div>
             <div class="timeline">
@@ -154,14 +175,13 @@
                             <h3>Universitas Pamulang</h3>
                             <span class="timeline-date">2019 - 2023</span>
                         </div>
-                        <h4 class="subtitle">Teknik Informatika, IPK 3.52/4.00</h4>
+                        <h4 class="subtitle"><span class="lang-id">Teknik Informatika</span><span class="lang-en">Informatics Engineering</span>, GPA 3.52/4.00</h4>
                         <ul class="list">
-                            <li>Fokus pada Cyber Security, Software Engineering dan Project Management.</li>
-                            <li>Lomba Gemastik XV 2022 untuk Divisi Keamanan Siber.</li>
-                            <li><strong>Skripsi:</strong> Pengembangan Sistem Informasi Enterprise Resource Planning
-                                Fiber to The Home pada Studi Kasus PT Trans Hybrid Communication - <a
+                            <li><span class="lang-id">Fokus pada Cyber Security, Software Engineering dan Project Management.</span><span class="lang-en">Focused on Cyber Security, Software Engineering, and Project Management.</span></li>
+                            <li><span class="lang-id">Lomba Gemastik XV 2022 untuk Divisi Keamanan Siber.</span><span class="lang-en">Gemastik XV 2022 Competition in the Cyber Security Division.</span></li>
+                            <li><strong><span class="lang-id">Skripsi</span><span class="lang-en">Thesis</span>:</strong> <span class="lang-id">Pengembangan Sistem Informasi Enterprise Resource Planning Fiber to The Home pada Studi Kasus PT Trans Hybrid Communication</span><span class="lang-en">Development of Enterprise Resource Planning Information System for Fiber to The Home (Case Study: PT Trans Hybrid Communication)</span> - <a
                                     href="https://jurnal.tau.ac.id/index.php/siskom-kb/article/view/450" target="_blank"
-                                    class="text-link">Link Jurnal</a></li>
+                                    class="text-link"><span class="lang-id">Link Jurnal</span><span class="lang-en">Journal Link</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -171,7 +191,7 @@
         <!-- Work Experience -->
         <section id="experience" class="section">
             <div class="section-header">
-                <h2>Pengalaman Kerja</h2>
+                <h2><span class="lang-id">Pengalaman Kerja</span><span class="lang-en">Work Experience</span></h2>
                 <div class="line"></div>
             </div>
             <div class="timeline">
@@ -181,16 +201,13 @@
                     <div class="timeline-content glass-panel">
                         <div class="timeline-header">
                             <h3>IT Development Team Lead</h3>
-                            <span class="timeline-date">Agustus 2026 - Sekarang</span>
+                            <span class="timeline-date"><span class="lang-id">Agustus 2026 - Sekarang</span><span class="lang-en">August 2026 - Present</span></span>
                         </div>
                         <h4 class="company">PT Sinergi Inti Andalan Prima Tbk (Sinergy Networks)</h4>
                         <ul class="list">
-                            <li>Memimpin tim pengembangan teknologi informasi dalam merancang dan mengembangkan sistem
-                                berskala enterprise.</li>
-                            <li>Mengawasi seluruh siklus pengembangan perangkat lunak (SDLC) dan memastikan standar
-                                keamanan serta skalabilitas sistem terpenuhi.</li>
-                            <li>Berkolaborasi lintas divisi untuk menyelaraskan solusi IT dengan tujuan strategis
-                                bisnis.</li>
+                            <li><span class="lang-id">Memimpin tim pengembangan teknologi informasi dalam merancang dan mengembangkan sistem berskala enterprise.</span><span class="lang-en">Led the IT development team in designing and developing enterprise-scale systems.</span></li>
+                            <li><span class="lang-id">Mengawasi seluruh siklus pengembangan perangkat lunak (SDLC) dan memastikan standar keamanan serta skalabilitas sistem terpenuhi.</span><span class="lang-en">Oversaw the entire Software Development Life Cycle (SDLC) ensuring security standards and system scalability were met.</span></li>
+                            <li><span class="lang-id">Berkolaborasi lintas divisi untuk menyelaraskan solusi IT dengan tujuan strategis bisnis.</span><span class="lang-en">Collaborated across divisions to align IT solutions with strategic business goals.</span></li>
                         </ul>
                         <div class="tech-stack" style="margin-top: 1rem;">
                             <span>Next.js</span><span>Nest.js</span><span>Python</span><span>Docker</span><span>Kubernetes</span><span>Google Cloud Platform</span>
@@ -203,7 +220,7 @@
                     <div class="timeline-content glass-panel">
                         <div class="timeline-header">
                             <h3>PT. Trans Hybrid Communication</h3>
-                            <span class="timeline-date">Sep 2018 - Agt 2026 (8 thn)</span>
+                            <span class="timeline-date"><span class="lang-id">Sep 2018 - Agt 2026 (8 thn)</span><span class="lang-en">Sep 2018 - Aug 2026 (8 yrs)</span></span>
                         </div>
                         <ul class="list" style="margin-top: 15px;">
                             <li style="margin-bottom: 15px; padding-left: 1.5rem;">
@@ -211,40 +228,35 @@
                                     style="color: var(--accent-primary); font-family: 'Fira Code', monospace; font-size: 1.1rem;">IT
                                     Development Manager</strong> <br>
                                 <span
-                                    style="font-size: 0.85rem; color: var(--text-secondary); font-family: 'Fira Code', monospace;">Agt
-                                    2025 - Agt 2026</span>
+                                    style="font-size: 0.85rem; color: var(--text-secondary); font-family: 'Fira Code', monospace;"><span class="lang-id">Agt 2025 - Agt 2026</span><span class="lang-en">Aug 2025 - Aug 2026</span></span>
                             </li>
                             <li style="margin-bottom: 15px; padding-left: 1.5rem;">
                                 <strong
                                     style="color: var(--accent-primary); font-family: 'Fira Code', monospace; font-size: 1.1rem;">IT
                                     SPV</strong> <br>
                                 <span
-                                    style="font-size: 0.85rem; color: var(--text-secondary); font-family: 'Fira Code', monospace;">Feb
-                                    2023 - Agt 2025</span>
+                                    style="font-size: 0.85rem; color: var(--text-secondary); font-family: 'Fira Code', monospace;"><span class="lang-id">Feb 2023 - Agt 2025</span><span class="lang-en">Feb 2023 - Aug 2025</span></span>
                             </li>
                             <li style="margin-bottom: 15px; padding-left: 1.5rem;">
                                 <strong
                                     style="color: var(--accent-primary); font-family: 'Fira Code', monospace; font-size: 1.1rem;">Lead
                                     Software Engineer</strong> <br>
                                 <span
-                                    style="font-size: 0.85rem; color: var(--text-secondary); font-family: 'Fira Code', monospace;">Mar
-                                    2022 - Feb 2023</span>
+                                    style="font-size: 0.85rem; color: var(--text-secondary); font-family: 'Fira Code', monospace;">Mar 2022 - Feb 2023</span>
                             </li>
                             <li style="margin-bottom: 15px; padding-left: 1.5rem;">
                                 <strong
                                     style="color: var(--accent-primary); font-family: 'Fira Code', monospace; font-size: 1.1rem;">Senior
                                     Software Engineer</strong> <br>
                                 <span
-                                    style="font-size: 0.85rem; color: var(--text-secondary); font-family: 'Fira Code', monospace;">Apr
-                                    2021 - Mar 2022</span>
+                                    style="font-size: 0.85rem; color: var(--text-secondary); font-family: 'Fira Code', monospace;">Apr 2021 - Mar 2022</span>
                             </li>
                             <li style="margin-bottom: 15px; padding-left: 1.5rem;">
                                 <strong
                                     style="color: var(--accent-primary); font-family: 'Fira Code', monospace; font-size: 1.1rem;">Software
                                     Engineer</strong> <br>
                                 <span
-                                    style="font-size: 0.85rem; color: var(--text-secondary); font-family: 'Fira Code', monospace;">Sep
-                                    2018 - Apr 2021</span>
+                                    style="font-size: 0.85rem; color: var(--text-secondary); font-family: 'Fira Code', monospace;">Sep 2018 - Apr 2021</span>
                             </li>
                         </ul>
                         <div class="tech-stack" style="margin-top: 1rem;">
@@ -258,17 +270,14 @@
                     <div class="timeline-content glass-panel">
                         <div class="timeline-header">
                             <h3>Frontend Developer</h3>
-                            <span class="timeline-date">Juli - September 2018</span>
+                            <span class="timeline-date"><span class="lang-id">Juli - September 2018</span><span class="lang-en">July - September 2018</span></span>
                         </div>
                         <h4 class="company">PT Idea Nusantara Cipta</h4>
-                        <p class="location">Bogor, Jawa Barat</p>
+                        <p class="location">Bogor, <span class="lang-id">Jawa Barat</span><span class="lang-en">West Java</span></p>
                         <ul class="list">
-                            <li>Merancang dan mengembangkan antarmuka pengguna (UI) web yang dinamis, interaktif, dan
-                                responsif menggunakan framework AngularJS.</li>
-                            <li>Berkolaborasi intensif dengan pengembang backend untuk mengintegrasikan RESTful API
-                                secara mulus ke dalam ekosistem aplikasi C#.</li>
-                            <li>Menerjemahkan kebutuhan sistem ke dalam kode sisi klien (client-side) yang bersih,
-                                terstruktur, dan mudah dipelihara.</li>
+                            <li><span class="lang-id">Merancang dan mengembangkan antarmuka pengguna (UI) web yang dinamis, interaktif, dan responsif menggunakan framework AngularJS.</span><span class="lang-en">Designed and developed dynamic, interactive, and responsive web user interfaces using AngularJS framework.</span></li>
+                            <li><span class="lang-id">Berkolaborasi intensif dengan pengembang backend untuk mengintegrasikan RESTful API secara mulus ke dalam ekosistem aplikasi C#.</span><span class="lang-en">Collaborated intensively with backend developers to seamlessly integrate RESTful APIs into the C# application ecosystem.</span></li>
+                            <li><span class="lang-id">Menerjemahkan kebutuhan sistem ke dalam kode sisi klien (client-side) yang bersih, terstruktur, dan mudah dipelihara.</span><span class="lang-en">Translated system requirements into clean, structured, and maintainable client-side code.</span></li>
                         </ul>
                         <div class="tech-stack">
                             <span>AngularJS</span><span>C#</span><span>Azure</span>
@@ -281,16 +290,14 @@
                     <div class="timeline-content glass-panel">
                         <div class="timeline-header">
                             <h3>IT Support</h3>
-                            <span class="timeline-date">Mei - Juli 2018</span>
+                            <span class="timeline-date"><span class="lang-id">Mei - Juli 2018</span><span class="lang-en">May - July 2018</span></span>
                         </div>
                         <h4 class="company">SMK Informatika Bina Generasi 2</h4>
-                        <p class="location">Bogor, Jawa Barat</p>
+                        <p class="location">Bogor, <span class="lang-id">Jawa Barat</span><span class="lang-en">West Java</span></p>
                         <ul class="list">
-                            <li>Memberikan dukungan teknis dan melakukan troubleshooting perangkat keras dan perangkat
-                                lunak untuk staf pengajar.</li>
-                            <li>Mendukung operasional entri data pada sistem manajemen pemerintah dengan akurasi tinggi.
-                            </li>
-                            <li>Memfasilitasi pelatihan pengembangan web kepada siswa SMK kelas 12.</li>
+                            <li><span class="lang-id">Memberikan dukungan teknis dan melakukan troubleshooting perangkat keras dan perangkat lunak untuk staf pengajar.</span><span class="lang-en">Provided technical support and performed hardware/software troubleshooting for teaching staff.</span></li>
+                            <li><span class="lang-id">Mendukung operasional entri data pada sistem manajemen pemerintah dengan akurasi tinggi.</span><span class="lang-en">Supported data entry operations on government management systems with high accuracy.</span></li>
+                            <li><span class="lang-id">Memfasilitasi pelatihan pengembangan web kepada siswa SMK kelas 12.</span><span class="lang-en">Facilitated web development training for 12th-grade vocational students.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -300,14 +307,14 @@
                     <div class="timeline-content glass-panel">
                         <div class="timeline-header">
                             <h3>Internship Web Developer</h3>
-                            <span class="timeline-date">Oktober 2016 - Januari 2017</span>
+                            <span class="timeline-date"><span class="lang-id">Oktober 2016 - Januari 2017</span><span class="lang-en">October 2016 - January 2017</span></span>
                         </div>
                         <h4 class="company">Agribisnispedia.com</h4>
-                        <p class="location">Bogor, Jawa Barat</p>
+                        <p class="location">Bogor, <span class="lang-id">Jawa Barat</span><span class="lang-en">West Java</span></p>
                         <ul class="list">
-                            <li>Menguasai fondasi dasar pengembangan web sisi backend secara mendalam.</li>
-                            <li>Mengembangkan keterampilan dalam pembuatan website melalui WordPress dan Blogger.</li>
-                            <li>Membangun keterampilan desain grafis menggunakan Adobe Photoshop dan CorelDraw.</li>
+                            <li><span class="lang-id">Menguasai fondasi dasar pengembangan web sisi backend secara mendalam.</span><span class="lang-en">Mastered foundational backend web development concepts.</span></li>
+                            <li><span class="lang-id">Mengembangkan keterampilan dalam pembuatan website melalui WordPress dan Blogger.</span><span class="lang-en">Developed skills in building websites using WordPress and Blogger.</span></li>
+                            <li><span class="lang-id">Membangun keterampilan desain grafis menggunakan Adobe Photoshop dan CorelDraw.</span><span class="lang-en">Built graphic design skills using Adobe Photoshop and CorelDraw.</span></li>
                         </ul>
                         <div class="tech-stack">
                             <span>Wordpress</span><span>Blogger</span><span>Codeigniter</span><span>Photoshop</span><span>CorelDraw</span>
@@ -321,7 +328,7 @@
         <!-- Projects / Freelance -->
         <section id="projects" class="section">
             <div class="section-header">
-                <h2>Pengalaman Proyek (Freelance)</h2>
+                <h2><span class="lang-id">Pengalaman Proyek (Freelance)</span><span class="lang-en">Project Experience (Freelance)</span></h2>
                 <div class="line"></div>
             </div>
 
@@ -330,15 +337,14 @@
                 <div class="card reveal glass-panel">
                     <div class="card-header">
                         <h3>Data Security Engineer</h3>
-                        <span class="date">Des 2025 - Sekarang</span>
+                        <span class="date"><span class="lang-id">Des 2025 - Sekarang</span><span class="lang-en">Dec 2025 - Present</span></span>
                     </div>
                     <h4 class="company">PT UPAYA TEHNIK</h4>
-                    <p class="location">Bandung, Jawa Barat</p>
+                    <p class="location">Bandung, <span class="lang-id">Jawa Barat</span><span class="lang-en">West Java</span></p>
                     <ul class="list">
-                        <li>Mengeksekusi pengujian dan integrasi API OpenText.</li>
-                        <li>Mengelola operasional portal asesmen guna mengoptimalkan efisiensi alur kerja.</li>
-                        <li>Memfasilitasi program pendampingan dan pelatihan bagi developer mengenai implementasi
-                            standar pengamanan data (secure-at-rest).</li>
+                        <li><span class="lang-id">Mengeksekusi pengujian dan integrasi API OpenText.</span><span class="lang-en">Executed testing and integration of the OpenText API.</span></li>
+                        <li><span class="lang-id">Mengelola operasional portal asesmen guna mengoptimalkan efisiensi alur kerja.</span><span class="lang-en">Managed assessment portal operations to optimize workflow efficiency.</span></li>
+                        <li><span class="lang-id">Memfasilitasi program pendampingan dan pelatihan bagi developer mengenai implementasi standar pengamanan data (secure-at-rest).</span><span class="lang-en">Facilitated mentoring and training programs for developers on implementing data security standards (secure-at-rest).</span></li>
                     </ul>
                     <div class="tech-stack">
                         <span>Postman</span><span>API OpenText</span><span>VPN</span>
@@ -348,14 +354,14 @@
                 <div class="card reveal glass-panel">
                     <div class="card-header">
                         <h3>Backend Engineer</h3>
-                        <span class="date">Mar - Agu 2023</span>
+                        <span class="date"><span class="lang-id">Mar - Agu 2023</span><span class="lang-en">Mar - Aug 2023</span></span>
                     </div>
                     <h4 class="company">Mahir Farm Nusantara</h4>
-                    <p class="location">Bogor, Jawa Barat</p>
+                    <p class="location">Bogor, <span class="lang-id">Jawa Barat</span><span class="lang-en">West Java</span></p>
                     <ul class="list">
-                        <li>Merancang dan mengembangkan RESTful API yang aman, efisien, dan terukur.</li>
-                        <li>Membangun dan mengoptimalkan arsitektur basis data untuk menangani lonjakan traffic.</li>
-                        <li>Mengimplementasikan praktik terbaik dalam keamanan sistem dan optimasi kode.</li>
+                        <li><span class="lang-id">Merancang dan mengembangkan RESTful API yang aman, efisien, dan terukur.</span><span class="lang-en">Designed and developed secure, efficient, and scalable RESTful APIs.</span></li>
+                        <li><span class="lang-id">Membangun dan mengoptimalkan arsitektur basis data untuk menangani lonjakan traffic.</span><span class="lang-en">Built and optimized database architecture to handle traffic surges.</span></li>
+                        <li><span class="lang-id">Mengimplementasikan praktik terbaik dalam keamanan sistem dan optimasi kode.</span><span class="lang-en">Implemented best practices in system security and code optimization.</span></li>
                     </ul>
                     <div class="tech-stack">
                         <span>Codeigniter</span><span>MySQL</span><span>Midtrans</span>
@@ -365,15 +371,14 @@
                 <div class="card reveal glass-panel">
                     <div class="card-header">
                         <h3>Backend Developer</h3>
-                        <span class="date">Jun - Sep 2022</span>
+                        <span class="date"><span class="lang-id">Jun - Sep 2022</span><span class="lang-en">Jun - Sep 2022</span></span>
                     </div>
                     <h4 class="company">PT Dasa Karya Indonesia (Carinih)</h4>
                     <p class="location">Tangerang, Banten</p>
                     <ul class="list">
-                        <li>Merancang dan Mengembangkan RESTful API untuk integrasi mobile app dengan GrabFood & GoFood.
-                        </li>
-                        <li>Mengoptimalkan (Refactoring & Improvement) API eksisting.</li>
-                        <li>Mengintegrasikan layanan logistik pihak ketiga (Lalamove API).</li>
+                        <li><span class="lang-id">Merancang dan Mengembangkan RESTful API untuk integrasi mobile app dengan GrabFood & GoFood.</span><span class="lang-en">Designed and developed RESTful APIs for mobile app integration with GrabFood & GoFood.</span></li>
+                        <li><span class="lang-id">Mengoptimalkan (Refactoring & Improvement) API eksisting.</span><span class="lang-en">Optimized (Refactoring & Improvement) existing APIs.</span></li>
+                        <li><span class="lang-id">Mengintegrasikan layanan logistik pihak ketiga (Lalamove API).</span><span class="lang-en">Integrated third-party logistics services (Lalamove API).</span></li>
                     </ul>
                     <div class="tech-stack">
                         <span>Codeigniter</span><span>Grabfood API</span><span>Gojek Food API</span><span>Lalamove
@@ -384,14 +389,14 @@
                 <div class="card reveal glass-panel">
                     <div class="card-header">
                         <h3>Backend Developer</h3>
-                        <span class="date">Jan 2022 - Mar 2024</span>
+                        <span class="date"><span class="lang-id">Jan 2022 - Mar 2024</span><span class="lang-en">Jan 2022 - Mar 2024</span></span>
                     </div>
                     <h4 class="company">PT Kartini Indonesia</h4>
                     <p class="location">Jakarta Selatan</p>
                     <ul class="list">
-                        <li>Mengembangkan, memelihara, dan mengoptimalkan arsitektur sistem backend.</li>
-                        <li>Melakukan integrasi Jack API secara komprehensif.</li>
-                        <li>Mengimplementasikan WhatsApp API untuk sistem komunikasi real-time.</li>
+                        <li><span class="lang-id">Mengembangkan, memelihara, dan mengoptimalkan arsitektur sistem backend.</span><span class="lang-en">Developed, maintained, and optimized backend system architecture.</span></li>
+                        <li><span class="lang-id">Melakukan integrasi Jack API secara komprehensif.</span><span class="lang-en">Performed comprehensive Jack API integrations.</span></li>
+                        <li><span class="lang-id">Mengimplementasikan WhatsApp API untuk sistem komunikasi real-time.</span><span class="lang-en">Implemented WhatsApp API for real-time communication systems.</span></li>
                     </ul>
                     <div class="tech-stack">
                         <span>Codeigniter</span><span>Nest.js</span><span>Jack API</span><span>WhatsApp API</span>
@@ -401,44 +406,42 @@
                 <div class="card reveal glass-panel">
                     <div class="card-header">
                         <h3>Security Engineer</h3>
-                        <span class="date">Okt - Nov 2022</span>
+                        <span class="date"><span class="lang-id">Okt - Nov 2022</span><span class="lang-en">Oct - Nov 2022</span></span>
                     </div>
                     <h4 class="company">Komisi Pemberantasan Korupsi (KPK)</h4>
                     <p class="location">Jakarta Selatan</p>
                     <ul class="list">
-                        <li>Mengeksekusi uji ketahanan (resilience testing) pada infrastruktur sistem internal.</li>
-                        <li>Menyusun laporan hasil pengujian secara komprehensif.</li>
-                        <li>Merumuskan dan menetapkan standar operasional keamanan sistem.</li>
+                        <li><span class="lang-id">Mengeksekusi uji ketahanan (resilience testing) pada infrastruktur sistem internal.</span><span class="lang-en">Executed resilience testing on internal system infrastructure.</span></li>
+                        <li><span class="lang-id">Menyusun laporan hasil pengujian secara komprehensif.</span><span class="lang-en">Compiled comprehensive test result reports.</span></li>
+                        <li><span class="lang-id">Merumuskan dan menetapkan standar operasional keamanan sistem.</span><span class="lang-en">Formulated and established system security operational standards.</span></li>
                     </ul>
                 </div>
 
                 <div class="card reveal glass-panel">
                     <div class="card-header">
                         <h3>Security Engineer</h3>
-                        <span class="date">Sep - Okt 2022</span>
+                        <span class="date"><span class="lang-id">Sep - Okt 2022</span><span class="lang-en">Sep - Oct 2022</span></span>
                     </div>
                     <h4 class="company">PT METRA-NET</h4>
                     <p class="location">Jakarta Selatan</p>
                     <ul class="list">
-                        <li>Melaksanakan uji ketahanan (resilience testing) dan evaluasi keamanan pada Sistem Kampus
-                            Merdeka.</li>
-                        <li>Mengeksekusi penilaian kerentanan (vulnerability assessment).</li>
-                        <li>Menyusun laporan hasil pengujian yang komprehensif, dilengkapi dengan panduan mitigasi.</li>
+                        <li><span class="lang-id">Melaksanakan uji ketahanan (resilience testing) dan evaluasi keamanan pada Sistem Kampus Merdeka.</span><span class="lang-en">Conducted resilience testing and security evaluations on the Kampus Merdeka System.</span></li>
+                        <li><span class="lang-id">Mengeksekusi penilaian kerentanan (vulnerability assessment).</span><span class="lang-en">Executed vulnerability assessments.</span></li>
+                        <li><span class="lang-id">Menyusun laporan hasil pengujian yang komprehensif, dilengkapi dengan panduan mitigasi.</span><span class="lang-en">Compiled comprehensive test reports complete with mitigation guidelines.</span></li>
                     </ul>
                 </div>
 
                 <div class="card reveal glass-panel">
                     <div class="card-header">
                         <h3>Backend Engineer</h3>
-                        <span class="date">Mar - Apr 2022</span>
+                        <span class="date"><span class="lang-id">Mar - Apr 2022</span><span class="lang-en">Mar - Apr 2022</span></span>
                     </div>
                     <h4 class="company">PT. Kreasi Sejahtera Bahagia (NLE)</h4>
                     <p class="location">Jakarta Selatan</p>
                     <ul class="list">
-                        <li>Mengembangkan RESTful API menggunakan PHP CodeIgniter 3 untuk live streaming Mandalika
-                            MotoGP 2022.</li>
-                        <li>Mengintegrasikan infrastruktur AWS untuk live streaming video.</li>
-                        <li>Mengimplementasikan Firebase untuk fitur live chat real-time.</li>
+                        <li><span class="lang-id">Mengembangkan RESTful API menggunakan PHP CodeIgniter 3 untuk live streaming Mandalika MotoGP 2022.</span><span class="lang-en">Developed RESTful APIs using PHP CodeIgniter 3 for the Mandalika MotoGP 2022 live streaming.</span></li>
+                        <li><span class="lang-id">Mengintegrasikan infrastruktur AWS untuk live streaming video.</span><span class="lang-en">Integrated AWS infrastructure for video live streaming.</span></li>
+                        <li><span class="lang-id">Mengimplementasikan Firebase untuk fitur live chat real-time.</span><span class="lang-en">Implemented Firebase for real-time live chat features.</span></li>
                     </ul>
                     <div class="tech-stack">
                         <span>Codeigniter</span><span>Firebase</span><span>AWS</span>
@@ -448,15 +451,14 @@
                 <div class="card reveal glass-panel">
                     <div class="card-header">
                         <h3>Penetration Tester</h3>
-                        <span class="date">Feb - Jul 2022</span>
+                        <span class="date"><span class="lang-id">Feb - Jul 2022</span><span class="lang-en">Feb - Jul 2022</span></span>
                     </div>
                     <h4 class="company">Tokocrypto</h4>
                     <p class="location">Jakarta Selatan</p>
                     <ul class="list">
-                        <li>Melaksanakan audit dan pengujian keamanan secara menyeluruh pada Sistem Internal Tokocrypto.
-                        </li>
-                        <li>Mengeksekusi pengujian kerentanan pada Smart Contract Token.</li>
-                        <li>Menyusun laporan hasil pengujian dengan rekomendasi teknis mitigasi.</li>
+                        <li><span class="lang-id">Melaksanakan audit dan pengujian keamanan secara menyeluruh pada Sistem Internal Tokocrypto.</span><span class="lang-en">Conducted comprehensive security audits and testing on Tokocrypto's Internal Systems.</span></li>
+                        <li><span class="lang-id">Mengeksekusi pengujian kerentanan pada Smart Contract Token.</span><span class="lang-en">Executed vulnerability testing on Smart Contract Tokens.</span></li>
+                        <li><span class="lang-id">Menyusun laporan hasil pengujian dengan rekomendasi teknis mitigasi.</span><span class="lang-en">Compiled test reports with technical mitigation recommendations.</span></li>
                     </ul>
                 </div>
 
@@ -466,14 +468,14 @@
         <!-- Skills -->
         <section id="skills" class="section">
             <div class="section-header">
-                <h2>Kemampuan</h2>
+                <h2><span class="lang-id">Kemampuan</span><span class="lang-en">Skills</span></h2>
                 <div class="line"></div>
             </div>
             <div class="skills-container reveal">
                 <div class="skill-category glass-panel">
                     <h3><i class="fas fa-code"></i> Programming</h3>
                     <div class="skill-tags">
-                        <span>Go</span><span>PHP</span><span>Javascript</span>
+                        <span>Go</span><span>PHP</span><span>Javascript</span><span>Python</span>
                     </div>
                 </div>
                 <div class="skill-category glass-panel">
@@ -499,7 +501,7 @@
                     <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
                     <div class="skill-tags">
                         <span>Google Cloud
-                            Platform</span><span>Kubernetes</span><span>ArgoCD</span><span>Proxmox</span><span>Linux</span>
+                            Platform</span><span>Kubernetes</span><span>ArgoCD</span><span>Proxmox</span><span>Linux</span><span>Docker</span>
                     </div>
                 </div>
                 <div class="skill-category glass-panel">
@@ -514,7 +516,7 @@
         <!-- Certifications -->
         <section id="certifications" class="section">
             <div class="section-header">
-                <h2>Sertifikasi</h2>
+                <h2><span class="lang-id">Sertifikasi</span><span class="lang-en">Certifications</span></h2>
                 <div class="line"></div>
             </div>
             <div class="cert-list">
@@ -556,7 +558,7 @@
                 <div class="cert-item reveal glass-panel">
                     <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
                     <div class="cert-info">
-                        <h3>Pengembang Perangkat Lunak</h3>
+                        <h3><span class="lang-id">Pengembang Perangkat Lunak</span><span class="lang-en">Software Developer</span></h3>
                         <p>BNSP | ID: TIK1426005242023</p>
                     </div>
                 </div>

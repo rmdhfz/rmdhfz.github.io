@@ -145,4 +145,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Language Toggle Logic
+    const langToggleBtn = document.getElementById('lang-toggle');
+    if (langToggleBtn) {
+        langToggleBtn.addEventListener('click', () => {
+            let currentLang = document.documentElement.lang;
+            let newLang = currentLang === 'id' ? 'en' : 'id';
+            document.documentElement.lang = newLang;
+            localStorage.setItem('pref-lang', newLang);
+        });
+    }
 });
