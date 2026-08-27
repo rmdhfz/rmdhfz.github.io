@@ -1,150 +1,120 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    // Terminal Typing Animation Logic
+    const terminalContent = document.getElementById('terminal-content');
     
-    // Initialize Vanilla Tilt
-    if (typeof VanillaTilt !== 'undefined') {
-        VanillaTilt.init(document.querySelectorAll(".glass-panel"), {
-            max: 5,
-            speed: 400,
-            glare: true,
-            "max-glare": 0.1,
-        });
+    if (terminalContent) {
+        const terminalSequence = [
+            { type: 'command', text: 'whoami' },
+            { type: 'output', text: '"Hafiz Ramadhan - IT Development Team Lead, Cyber Security Enthusiast, and builder of robust, high-scale distributed systems."' },
+            { type: 'command', text: 'cat profile.json' },
+            { type: 'json', text: `{
+  <span class="term-string">"name"</span>: <span class="term-string">"Hafiz Ramadhan"</span>,
+  <span class="term-string">"domain"</span>: <span class="term-string">"rmdhfz.github.io"</span>,
+  <span class="term-string">"focus"</span>: [
+    <span class="term-string">"Cyber Security"</span>,
+    <span class="term-string">"Distributed Systems"</span>,
+    <span class="term-string">"Cloud Architecture"</span>,
+    <span class="term-string">"Full-Stack Web Engineering"</span>
+  ],
+  <span class="term-string">"languages"</span>: [<span class="term-string">"Go"</span>, <span class="term-string">"Python"</span>, <span class="term-string">"TypeScript"</span>, <span class="term-string">"PHP"</span>],
+  <span class="term-string">"infrastructure"</span>: [<span class="term-string">"GCP"</span>, <span class="term-string">"Kubernetes"</span>, <span class="term-string">"Docker"</span>, <span class="term-string">"Proxmox"</span>],
+  <span class="term-string">"status"</span>: <span class="term-string">"Building the future"</span>
+}` }
+        ];
+
+        let seqIndex = 0;
+
+        function renderNextSequence() {
+            if (seqIndex >= terminalSequence.length) return;
+
+            const seq = terminalSequence[seqIndex];
+            const line = document.createElement('div');
+            
+            if (seq.type === 'command') {
+                line.className = 'term-line font-mono';
+                line.innerHTML = `<span class="term-prompt">$</span><span class="typing-cmd"></span>`;
+                terminalContent.appendChild(line);
+                
+                typeText(line.querySelector('.typing-cmd'), seq.text, 0, () => {
+                    seqIndex++;
+                    setTimeout(renderNextSequence, 400); // Wait before next line
+                });
+            } else if (seq.type === 'output') {
+                line.className = 'term-line mb-4 text-secondary font-mono';
+                line.innerHTML = seq.text;
+                terminalContent.appendChild(line);
+                seqIndex++;
+                setTimeout(renderNextSequence, 800);
+            } else if (seq.type === 'json') {
+                line.className = 'term-line font-mono';
+                line.innerHTML = `<pre><code>${seq.text}</code></pre>`;
+                terminalContent.appendChild(line);
+                seqIndex++;
+                // Add blinking cursor at the end
+                const cursorLine = document.createElement('div');
+                cursorLine.className = 'term-line font-mono';
+                cursorLine.innerHTML = `<span class="term-prompt">$</span><span class="cursor" style="display:inline-block;width:8px;height:15px;background:#fff;animation:blink 1s step-end infinite;"></span>`;
+                terminalContent.appendChild(cursorLine);
+            }
+        }
+
+        function typeText(element, text, index, callback) {
+            if (index < text.length) {
+                element.textContent += text.charAt(index);
+                setTimeout(() => typeText(element, text, index + 1, callback), 50 + Math.random() * 50);
+            } else {
+                if (callback) callback();
+            }
+        }
+
+        // Start animation after a short delay
+        setTimeout(renderNextSequence, 1000);
     }
 
-    // Theme Toggle Logic
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeIcon = themeToggleBtn.querySelector('i');
-    
-    // Check saved theme in localStorage or default to dark
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
-
-    themeToggleBtn.addEventListener('click', () => {
-        let currentTheme = document.documentElement.getAttribute('data-theme');
-        let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-    });
-
-    function updateThemeIcon(theme) {
-        if (theme === 'light') {
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
-        } else {
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-        }
-    }
-
-    // Typing Effect
-    const typingText = document.querySelector('.typing-text');
-    const words = [
-        "IT Development Team Lead",
-        "Software Engineer",
-        "Cyber Security Enthusiast",
-        "Penetration Tester",
-        "Backend Developer"
-    ];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingSpeed = 100;
-    
-    function typeEffect() {
-        const currentWord = words[wordIndex];
-        
-        if (isDeleting) {
-            typingText.textContent = currentWord.substring(0, charIndex - 1);
-            charIndex--;
-            typingSpeed = 50;
-        } else {
-            typingText.textContent = currentWord.substring(0, charIndex + 1);
-            charIndex++;
-            typingSpeed = 150;
-        }
-        
-        if (!isDeleting && charIndex === currentWord.length) {
-            isDeleting = true;
-            typingSpeed = 1500; // Pause at end of word
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            typingSpeed = 500; // Pause before new word
-        }
-        
-        setTimeout(typeEffect, typingSpeed);
-    }
-    
-    // Start typing effect after a short delay
-    setTimeout(typeEffect, 1000);
-
-    // Scroll Reveal Animation
-    const revealElements = document.querySelectorAll('.reveal');
+    // Scroll Animation
+    const revealElements = document.querySelectorAll('.clean-card, .timeline-item');
     
     function revealOnScroll() {
         const windowHeight = window.innerHeight;
-        const revealPoint = 150;
+        const revealPoint = 100;
         
         revealElements.forEach(el => {
             const revealTop = el.getBoundingClientRect().top;
             if (revealTop < windowHeight - revealPoint) {
-                el.classList.add('active');
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
             }
         });
     }
-    
+
+    // Setup initial state for scroll animations
+    revealElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+    });
+
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll(); // Trigger on load
 
     // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    const navPill = document.querySelector('.nav-pill');
     
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        const icon = hamburger.querySelector('i');
-        if (navLinks.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-        } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        }
-    });
-
-    // Close mobile menu on link click
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            const icon = hamburger.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        });
-    });
-    
-    // Active Navigation Link on Scroll
-    const sections = document.querySelectorAll('.section');
-    const navItems = document.querySelectorAll('.nav-links a');
-    
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= (sectionTop - 200)) {
-                current = section.getAttribute('id');
+    if (hamburger && navPill) {
+        hamburger.addEventListener('click', () => {
+            if (navPill.style.display === 'block') {
+                navPill.style.display = 'none';
+            } else {
+                navPill.style.display = 'block';
+                navPill.style.position = 'absolute';
+                navPill.style.top = '100%';
+                navPill.style.right = '2rem';
+                navPill.style.marginTop = '1rem';
             }
         });
-        
-        navItems.forEach(item => {
-            item.style.color = 'var(--text-primary)';
-            if (item.getAttribute('href') === `#${current}`) {
-                item.style.color = 'var(--accent-secondary)';
-            }
-        });
-    });
+    }
 
     // Language Toggle Logic
     const langToggleBtn = document.getElementById('lang-toggle');

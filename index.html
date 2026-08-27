@@ -8,7 +8,7 @@
     <meta name="description"
         content="Digital CV of Hafiz Ramadhan, Software Engineer & Cyber Security Enthusiast dengan 8 tahun pengalaman di bidang IT, Infrastruktur, dan Web Development.">
     <meta name="keywords"
-        content="Hafiz Ramadhan, Software Engineer, IT Development Team Lead, Cyber Security Enthusiast, Penetration Tester, Backend Developer, Portfolio, Digital CV, hfzrmd, rmdhfz, Hafiz Ramadhan, Team Lead">
+        content="Hafiz Ramadhan, Software Engineer, IT Development Team Lead, Cyber Security Enthusiast, Penetration Tester, Backend Developer, Portfolio, Digital CV">
     <meta name="author" content="Hafiz Ramadhan">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
@@ -37,85 +37,39 @@
         })();
     </script>
 
-    <!-- Open Graph / SEO Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rmdhfz.github.io/">
-    <meta property="og:title" content="Hafiz Ramadhan | Digital CV">
-    <meta property="og:description"
-        content="Software Engineer & Cyber Security Enthusiast dengan pengalaman mendalam di bidang infrastruktur dan web development.">
-    <meta property="og:image" content="https://rmdhfz.github.io/profile.jpg">
-    <meta property="og:locale" content="id_ID">
-    <meta property="og:site_name" content="Hafiz Ramadhan | Portfolio">
-
-    <!-- Twitter SEO Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hafiz Ramadhan | Digital CV">
-    <meta name="twitter:description"
-        content="Software Engineer & Cyber Security Enthusiast dengan pengalaman mendalam di bidang infrastruktur dan web development.">
-    <meta name="twitter:image" content="https://rmdhfz.github.io/profile.jpg">
-
-    <!-- JSON-LD Structured Data (Schema.org) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Hafiz Ramadhan",
-      "jobTitle": "Information Technology Development Team Lead",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "PT Sinergi Inti Andalan Prima Tbk"
-      },
-      "url": "https://rmdhfz.github.io/",
-      "image": "https://rmdhfz.github.io/profile.jpg",
-      "sameAs": [
-        "https://linkedin.com/in/hfzrmd",
-        "https://github.com/rmdhfz"
-      ],
-      "knowsAbout": [
-        "Software Engineering", 
-        "Cyber Security", 
-        "Cloud Computing", 
-        "DevOps", 
-        "Penetration Testing"
-      ]
-    }
-    </script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap"
-        rel="stylesheet">
-
-    <!-- FontAwesome for Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="stylesheet" href="style.css?v=2.0">
 </head>
 
 <body>
-    <!-- Background Elements -->
-    <div class="bg-shape shape-1"></div>
-    <div class="bg-shape shape-2"></div>
-    <div class="bg-shape shape-3"></div>
+    <!-- Background Grid -->
+    <div class="grid-bg"></div>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">HR<span class="dot">.</span></a>
-            <ul class="nav-links">
-                <li><a href="#about"><span class="lang-id">Pendidikan</span><span class="lang-en">Education</span></a></li>
-                <li><a href="#experience"><span class="lang-id">Pengalaman</span><span class="lang-en">Experience</span></a></li>
-                <li><a href="#projects"><span class="lang-id">Proyek</span><span class="lang-en">Projects</span></a></li>
-                <li><a href="#skills"><span class="lang-id">Kemampuan</span><span class="lang-en">Skills</span></a></li>
-                <li><a href="#certifications"><span class="lang-id">Sertifikasi</span><span class="lang-en">Certifications</span></a></li>
-            </ul>
+            <a href="#" class="logo">
+                <span class="logo-box">HR</span>
+                <span class="logo-text">Hafiz Ramadhan</span>
+            </a>
+            <div class="nav-pill">
+                <ul class="nav-links">
+                    <li><a href="#about"><span class="lang-id">Pendidikan</span><span class="lang-en">About</span></a></li>
+                    <li><a href="#projects"><span class="lang-id">Proyek</span><span class="lang-en">Projects</span></a></li>
+                    <li><a href="#skills"><span class="lang-id">Kemampuan</span><span class="lang-en">Skills</span></a></li>
+                    <li><a href="#experience"><span class="lang-id">Pengalaman</span><span class="lang-en">Experience</span></a></li>
+                </ul>
+            </div>
             <div class="nav-controls">
                 <button id="lang-toggle" class="lang-btn" aria-label="Toggle Language">ID / EN</button>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
-                    <i class="fas fa-sun"></i>
-                </button>
+                <a href="https://github.com/rmdhfz" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/hfzrmd" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
                 <div class="hamburger">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -126,51 +80,77 @@
     <main>
         <!-- Hero Section -->
         <section id="hero" class="hero">
-            <div class="hero-wrapper">
-                <div class="hero-content">
-                    <p class="greeting">Hi, I'm</p>
-                    <h1 class="name">Hafiz Ramadhan</h1>
-                    <h2 class="titles">
-                        <span class="typing-text"></span><span class="cursor">&nbsp;</span>
-                    </h2>
-                    <p class="summary">
-                        <span class="lang-id">Dengan 8 tahun pengalaman di bidang Internet Service Provider. Memiliki keahlian mendalam dalam <strong>software development</strong>, <strong>cyber security</strong>, dan <strong>infrastruktur</strong>.</span>
-                        <span class="lang-en">With 8 years of experience in the Internet Service Provider industry. Having deep expertise in <strong>software development</strong>, <strong>cyber security</strong>, and <strong>infrastructure</strong>.</span>
-                    </p>
-                    <div class="contact-info">
-                        <a href="mailto:hfzrmd@gmail.com" target="_blank" class="contact-link"
-                            title="Email Hafiz Ramadhan"><i class="fas fa-envelope"></i>
-                            hfzrmd@gmail.com</a>
-                        <a href="https://linkedin.com/in/hfzrmd" target="_blank" class="contact-link"
-                            title="LinkedIn Hafiz Ramadhan"><i class="fab fa-linkedin"></i> linkedin.com/in/hfzrmd</a>
-                        <a href="https://github.com/rmdhfz" target="_blank" class="contact-link"
-                            title="GitHub Hafiz Ramadhan"><i class="fab fa-github"></i> github.com/rmdhfz</a>
-                        <span class="contact-location"><i class="fas fa-map-marker-alt"></i> Bogor, <span class="lang-id">Jawa Barat</span><span class="lang-en">West Java</span></span>
+            <div class="hero-layout">
+                <div class="hero-left">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span class="lang-id">Tersedia untuk peran IT & Cyber Security</span><span class="lang-en">Available for select IT & Cyber Security roles</span>
                     </div>
-                    <div class="cta-buttons">
-                        <a href="#experience" class="btn btn-primary"><span class="lang-id">Lihat Pengalaman</span><span class="lang-en">View Experience</span></a>
-                        <a href="CV%20-%20Hafiz%20Ramadhan%20-%202026.pdf" target="_blank" class="btn btn-secondary"><i
-                                class="fas fa-file-pdf"></i> Download CV (PDF)</a>
+                    <p class="hero-subtitle">H. RAMADHAN — DIGITAL PORTFOLIO</p>
+                    <h1 class="hero-title">Hi, I'm Hafiz<br>Ramadhan</h1>
+                    
+                    <p class="hero-description">
+                        <span class="lang-id">IT Development Team Lead & Cyber Security Enthusiast yang merancang sistem terdistribusi berkinerja tinggi, aplikasi web modern, dan infrastruktur IT yang tangguh.</span>
+                        <span class="lang-en">IT Development Team Lead & Cyber Security Enthusiast crafting high-performance distributed systems, modern web applications, and resilient IT infrastructure.</span>
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-dark"><span class="lang-id">Eksplorasi Proyek</span><span class="lang-en">Explore Projects</span> <i class="fas fa-arrow-right"></i></a>
+                        <a href="CV%20-%20Hafiz%20Ramadhan%20-%202026.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Download CV</a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3>8+</h3>
+                            <p><span class="lang-id">Tahun Pengalaman</span><span class="lang-en">Years Experience</span></p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>30+</h3>
+                            <p><span class="lang-id">Sistem Dirilis</span><span class="lang-en">Shipped Systems</span></p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100%</h3>
+                            <p><span class="lang-id">Fokus Keamanan</span><span class="lang-en">Security Focused</span></p>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="profile-frame">
-                        <img src="profile.jpg" draggable="false" alt="Hafiz Ramadhan" class="profile-img">
+                
+                <div class="hero-right">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="close"></span>
+                                <span class="minimize"></span>
+                                <span class="maximize"></span>
+                            </div>
+                            <div class="terminal-title">~/hafiz.sh</div>
+                        </div>
+                        <div class="terminal-body" id="terminal-content">
+                            <!-- Injected via JS -->
+                        </div>
+                        <div class="terminal-footer">
+                            <span class="terminal-footer-left"><i class="fas fa-cloud"></i> Infrastructure Ready</span>
+                            <span class="terminal-footer-right"><span class="status-dot"></span> Online</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <div class="section-divider">
+            <span class="pill-badge"><i class="far fa-user"></i> <span class="lang-id">Tentang Hafiz</span><span class="lang-en">About Hafiz</span></span>
+            <h2><span class="lang-id">Membangun sistem yang tangguh dengan presisi dan keamanan</span><span class="lang-en">Engineering robust systems with precision and security</span></h2>
+        </div>
+
         <!-- Education -->
         <section id="about" class="section">
             <div class="section-header">
                 <h2><span class="lang-id">Pendidikan</span><span class="lang-en">Education</span></h2>
-                <div class="line"></div>
             </div>
-            <div class="timeline">
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-panel">
+            <div class="clean-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
                         <div class="timeline-header">
                             <h3>Universitas Pamulang</h3>
                             <span class="timeline-date">2019 - 2023</span>
@@ -179,9 +159,7 @@
                         <ul class="list">
                             <li><span class="lang-id">Fokus pada Cyber Security, Software Engineering dan Project Management.</span><span class="lang-en">Focused on Cyber Security, Software Engineering, and Project Management.</span></li>
                             <li><span class="lang-id">Lomba Gemastik XV 2022 untuk Divisi Keamanan Siber.</span><span class="lang-en">Gemastik XV 2022 Competition in the Cyber Security Division.</span></li>
-                            <li><strong><span class="lang-id">Skripsi</span><span class="lang-en">Thesis</span>:</strong> <span class="lang-id">Pengembangan Sistem Informasi Enterprise Resource Planning Fiber to The Home pada Studi Kasus PT Trans Hybrid Communication</span><span class="lang-en">Development of Enterprise Resource Planning Information System for Fiber to The Home (Case Study: PT Trans Hybrid Communication)</span> - <a
-                                    href="https://jurnal.tau.ac.id/index.php/siskom-kb/article/view/450" target="_blank"
-                                    class="text-link"><span class="lang-id">Link Jurnal</span><span class="lang-en">Journal Link</span></a></li>
+                            <li><strong><span class="lang-id">Skripsi</span><span class="lang-en">Thesis</span>:</strong> <span class="lang-id">Pengembangan Sistem Informasi ERP FTTH Studi Kasus PT Trans Hybrid Communication</span><span class="lang-en">Development of ERP Information System for FTTH (Case Study: PT Trans Hybrid Communication)</span> - <a href="https://jurnal.tau.ac.id/index.php/siskom-kb/article/view/450" target="_blank" class="text-link">Link Jurnal</a></li>
                         </ul>
                     </div>
                 </div>
@@ -192,13 +170,11 @@
         <section id="experience" class="section">
             <div class="section-header">
                 <h2><span class="lang-id">Pengalaman Kerja</span><span class="lang-en">Work Experience</span></h2>
-                <div class="line"></div>
             </div>
-            <div class="timeline">
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-panel">
+            <div class="clean-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
                         <div class="timeline-header">
                             <h3>IT Development Team Lead</h3>
                             <span class="timeline-date"><span class="lang-id">Agustus 2026 - Sekarang</span><span class="lang-en">August 2026 - Present</span></span>
@@ -206,262 +182,102 @@
                         <h4 class="company">PT Sinergi Inti Andalan Prima Tbk (Sinergy Networks)</h4>
                         <ul class="list">
                             <li><span class="lang-id">Memimpin tim pengembangan teknologi informasi dalam merancang dan mengembangkan sistem berskala enterprise.</span><span class="lang-en">Led the IT development team in designing and developing enterprise-scale systems.</span></li>
-                            <li><span class="lang-id">Mengawasi seluruh siklus pengembangan perangkat lunak (SDLC) dan memastikan standar keamanan serta skalabilitas sistem terpenuhi.</span><span class="lang-en">Oversaw the entire Software Development Life Cycle (SDLC) ensuring security standards and system scalability were met.</span></li>
+                            <li><span class="lang-id">Mengawasi seluruh siklus pengembangan (SDLC) dan memastikan standar keamanan serta skalabilitas terpenuhi.</span><span class="lang-en">Oversaw the entire SDLC ensuring security standards and system scalability were met.</span></li>
                             <li><span class="lang-id">Berkolaborasi lintas divisi untuk menyelaraskan solusi IT dengan tujuan strategis bisnis.</span><span class="lang-en">Collaborated across divisions to align IT solutions with strategic business goals.</span></li>
                         </ul>
-                        <div class="tech-stack" style="margin-top: 1rem;">
-                            <span>Next.js</span><span>Nest.js</span><span>Python</span><span>Docker</span><span>Kubernetes</span><span>Google Cloud Platform</span>
+                        <div class="tech-stack">
+                            <span>Next.js</span><span>Nest.js</span><span>Python</span><span>Docker</span><span>Kubernetes</span><span>GCP</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-panel">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
                         <div class="timeline-header">
                             <h3>PT. Trans Hybrid Communication</h3>
-                            <span class="timeline-date"><span class="lang-id">Sep 2018 - Agt 2026 (8 thn)</span><span class="lang-en">Sep 2018 - Aug 2026 (8 yrs)</span></span>
+                            <span class="timeline-date"><span class="lang-id">Sep 2018 - Agt 2026</span><span class="lang-en">Sep 2018 - Aug 2026</span></span>
                         </div>
-                        <ul class="list" style="margin-top: 15px;">
-                            <li style="margin-bottom: 15px; padding-left: 1.5rem;">
-                                <strong
-                                    style="color: var(--accent-primary); font-family: 'Fira Code', monospace; font-size: 1.1rem;">IT
-                                    Development Manager</strong> <br>
-                                <span
-                                    style="font-size: 0.85rem; color: var(--text-secondary); font-family: 'Fira Code', monospace;"><span class="lang-id">Agt 2025 - Agt 2026</span><span class="lang-en">Aug 2025 - Aug 2026</span></span>
+                        <ul class="role-list">
+                            <li>
+                                <strong>IT Development Manager</strong> 
+                                <span><span class="lang-id">Agt 2025 - Agt 2026</span><span class="lang-en">Aug 2025 - Aug 2026</span></span>
                             </li>
-                            <li style="margin-bottom: 15px; padding-left: 1.5rem;">
-                                <strong
-                                    style="color: var(--accent-primary); font-family: 'Fira Code', monospace; font-size: 1.1rem;">IT
-                                    SPV</strong> <br>
-                                <span
-                                    style="font-size: 0.85rem; color: var(--text-secondary); font-family: 'Fira Code', monospace;"><span class="lang-id">Feb 2023 - Agt 2025</span><span class="lang-en">Feb 2023 - Aug 2025</span></span>
+                            <li>
+                                <strong>IT SPV</strong> 
+                                <span><span class="lang-id">Feb 2023 - Agt 2025</span><span class="lang-en">Feb 2023 - Aug 2025</span></span>
                             </li>
-                            <li style="margin-bottom: 15px; padding-left: 1.5rem;">
-                                <strong
-                                    style="color: var(--accent-primary); font-family: 'Fira Code', monospace; font-size: 1.1rem;">Lead
-                                    Software Engineer</strong> <br>
-                                <span
-                                    style="font-size: 0.85rem; color: var(--text-secondary); font-family: 'Fira Code', monospace;">Mar 2022 - Feb 2023</span>
+                            <li>
+                                <strong>Lead Software Engineer</strong> 
+                                <span>Mar 2022 - Feb 2023</span>
                             </li>
-                            <li style="margin-bottom: 15px; padding-left: 1.5rem;">
-                                <strong
-                                    style="color: var(--accent-primary); font-family: 'Fira Code', monospace; font-size: 1.1rem;">Senior
-                                    Software Engineer</strong> <br>
-                                <span
-                                    style="font-size: 0.85rem; color: var(--text-secondary); font-family: 'Fira Code', monospace;">Apr 2021 - Mar 2022</span>
+                            <li>
+                                <strong>Senior Software Engineer</strong> 
+                                <span>Apr 2021 - Mar 2022</span>
                             </li>
-                            <li style="margin-bottom: 15px; padding-left: 1.5rem;">
-                                <strong
-                                    style="color: var(--accent-primary); font-family: 'Fira Code', monospace; font-size: 1.1rem;">Software
-                                    Engineer</strong> <br>
-                                <span
-                                    style="font-size: 0.85rem; color: var(--text-secondary); font-family: 'Fira Code', monospace;">Sep 2018 - Apr 2021</span>
+                            <li>
+                                <strong>Software Engineer</strong> 
+                                <span>Sep 2018 - Apr 2021</span>
                             </li>
                         </ul>
-                        <div class="tech-stack" style="margin-top: 1rem;">
-                            <span>Codeigniter</span><span>Go</span><span>Nest.js</span><span>React.js</span><span>Next.js</span><span>Azure</span><span>Midtrans</span><span>Cloudflare</span>
+                        <div class="tech-stack mt-3">
+                            <span>Codeigniter</span><span>Go</span><span>Nest.js</span><span>React.js</span><span>Azure</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-panel">
-                        <div class="timeline-header">
-                            <h3>Frontend Developer</h3>
-                            <span class="timeline-date"><span class="lang-id">Juli - September 2018</span><span class="lang-en">July - September 2018</span></span>
-                        </div>
-                        <h4 class="company">PT Idea Nusantara Cipta</h4>
-                        <p class="location">Bogor, <span class="lang-id">Jawa Barat</span><span class="lang-en">West Java</span></p>
-                        <ul class="list">
-                            <li><span class="lang-id">Merancang dan mengembangkan antarmuka pengguna (UI) web yang dinamis, interaktif, dan responsif menggunakan framework AngularJS.</span><span class="lang-en">Designed and developed dynamic, interactive, and responsive web user interfaces using AngularJS framework.</span></li>
-                            <li><span class="lang-id">Berkolaborasi intensif dengan pengembang backend untuk mengintegrasikan RESTful API secara mulus ke dalam ekosistem aplikasi C#.</span><span class="lang-en">Collaborated intensively with backend developers to seamlessly integrate RESTful APIs into the C# application ecosystem.</span></li>
-                            <li><span class="lang-id">Menerjemahkan kebutuhan sistem ke dalam kode sisi klien (client-side) yang bersih, terstruktur, dan mudah dipelihara.</span><span class="lang-en">Translated system requirements into clean, structured, and maintainable client-side code.</span></li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span>AngularJS</span><span>C#</span><span>Azure</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-panel">
-                        <div class="timeline-header">
-                            <h3>IT Support</h3>
-                            <span class="timeline-date"><span class="lang-id">Mei - Juli 2018</span><span class="lang-en">May - July 2018</span></span>
-                        </div>
-                        <h4 class="company">SMK Informatika Bina Generasi 2</h4>
-                        <p class="location">Bogor, <span class="lang-id">Jawa Barat</span><span class="lang-en">West Java</span></p>
-                        <ul class="list">
-                            <li><span class="lang-id">Memberikan dukungan teknis dan melakukan troubleshooting perangkat keras dan perangkat lunak untuk staf pengajar.</span><span class="lang-en">Provided technical support and performed hardware/software troubleshooting for teaching staff.</span></li>
-                            <li><span class="lang-id">Mendukung operasional entri data pada sistem manajemen pemerintah dengan akurasi tinggi.</span><span class="lang-en">Supported data entry operations on government management systems with high accuracy.</span></li>
-                            <li><span class="lang-id">Memfasilitasi pelatihan pengembangan web kepada siswa SMK kelas 12.</span><span class="lang-en">Facilitated web development training for 12th-grade vocational students.</span></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-panel">
-                        <div class="timeline-header">
-                            <h3>Internship Web Developer</h3>
-                            <span class="timeline-date"><span class="lang-id">Oktober 2016 - Januari 2017</span><span class="lang-en">October 2016 - January 2017</span></span>
-                        </div>
-                        <h4 class="company">Agribisnispedia.com</h4>
-                        <p class="location">Bogor, <span class="lang-id">Jawa Barat</span><span class="lang-en">West Java</span></p>
-                        <ul class="list">
-                            <li><span class="lang-id">Menguasai fondasi dasar pengembangan web sisi backend secara mendalam.</span><span class="lang-en">Mastered foundational backend web development concepts.</span></li>
-                            <li><span class="lang-id">Mengembangkan keterampilan dalam pembuatan website melalui WordPress dan Blogger.</span><span class="lang-en">Developed skills in building websites using WordPress and Blogger.</span></li>
-                            <li><span class="lang-id">Membangun keterampilan desain grafis menggunakan Adobe Photoshop dan CorelDraw.</span><span class="lang-en">Built graphic design skills using Adobe Photoshop and CorelDraw.</span></li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span>Wordpress</span><span>Blogger</span><span>Codeigniter</span><span>Photoshop</span><span>CorelDraw</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
 
-        <!-- Projects / Freelance -->
+        <!-- Projects -->
         <section id="projects" class="section">
             <div class="section-header">
                 <h2><span class="lang-id">Pengalaman Proyek (Freelance)</span><span class="lang-en">Project Experience (Freelance)</span></h2>
-                <div class="line"></div>
             </div>
-
-            <div class="grid-cards">
-
-                <div class="card reveal glass-panel">
+            
+            <div class="clean-grid">
+                <div class="clean-card">
                     <div class="card-header">
                         <h3>Data Security Engineer</h3>
                         <span class="date"><span class="lang-id">Des 2025 - Sekarang</span><span class="lang-en">Dec 2025 - Present</span></span>
                     </div>
                     <h4 class="company">PT UPAYA TEHNIK</h4>
-                    <p class="location">Bandung, <span class="lang-id">Jawa Barat</span><span class="lang-en">West Java</span></p>
-                    <ul class="list">
-                        <li><span class="lang-id">Mengeksekusi pengujian dan integrasi API OpenText.</span><span class="lang-en">Executed testing and integration of the OpenText API.</span></li>
-                        <li><span class="lang-id">Mengelola operasional portal asesmen guna mengoptimalkan efisiensi alur kerja.</span><span class="lang-en">Managed assessment portal operations to optimize workflow efficiency.</span></li>
-                        <li><span class="lang-id">Memfasilitasi program pendampingan dan pelatihan bagi developer mengenai implementasi standar pengamanan data (secure-at-rest).</span><span class="lang-en">Facilitated mentoring and training programs for developers on implementing data security standards (secure-at-rest).</span></li>
+                    <ul class="list flex-grow">
+                        <li><span class="lang-id">Pengujian dan integrasi API OpenText.</span><span class="lang-en">Testing and integration of the OpenText API.</span></li>
+                        <li><span class="lang-id">Pelatihan developer mengenai standar pengamanan data (secure-at-rest).</span><span class="lang-en">Developer training on data security standards (secure-at-rest).</span></li>
                     </ul>
-                    <div class="tech-stack">
-                        <span>Postman</span><span>API OpenText</span><span>VPN</span>
+                    <div class="tech-stack mt-auto">
+                        <span>API OpenText</span><span>VPN</span>
                     </div>
                 </div>
 
-                <div class="card reveal glass-panel">
+                <div class="clean-card">
                     <div class="card-header">
                         <h3>Backend Engineer</h3>
                         <span class="date"><span class="lang-id">Mar - Agu 2023</span><span class="lang-en">Mar - Aug 2023</span></span>
                     </div>
                     <h4 class="company">Mahir Farm Nusantara</h4>
-                    <p class="location">Bogor, <span class="lang-id">Jawa Barat</span><span class="lang-en">West Java</span></p>
-                    <ul class="list">
-                        <li><span class="lang-id">Merancang dan mengembangkan RESTful API yang aman, efisien, dan terukur.</span><span class="lang-en">Designed and developed secure, efficient, and scalable RESTful APIs.</span></li>
-                        <li><span class="lang-id">Membangun dan mengoptimalkan arsitektur basis data untuk menangani lonjakan traffic.</span><span class="lang-en">Built and optimized database architecture to handle traffic surges.</span></li>
-                        <li><span class="lang-id">Mengimplementasikan praktik terbaik dalam keamanan sistem dan optimasi kode.</span><span class="lang-en">Implemented best practices in system security and code optimization.</span></li>
+                    <ul class="list flex-grow">
+                        <li><span class="lang-id">Merancang dan mengembangkan RESTful API yang aman.</span><span class="lang-en">Designed and developed secure RESTful APIs.</span></li>
+                        <li><span class="lang-id">Membangun arsitektur basis data untuk menangani lonjakan traffic.</span><span class="lang-en">Built database architecture to handle traffic surges.</span></li>
                     </ul>
-                    <div class="tech-stack">
+                    <div class="tech-stack mt-auto">
                         <span>Codeigniter</span><span>MySQL</span><span>Midtrans</span>
                     </div>
                 </div>
 
-                <div class="card reveal glass-panel">
+                <div class="clean-card">
                     <div class="card-header">
                         <h3>Backend Developer</h3>
                         <span class="date"><span class="lang-id">Jun - Sep 2022</span><span class="lang-en">Jun - Sep 2022</span></span>
                     </div>
                     <h4 class="company">PT Dasa Karya Indonesia (Carinih)</h4>
-                    <p class="location">Tangerang, Banten</p>
-                    <ul class="list">
-                        <li><span class="lang-id">Merancang dan Mengembangkan RESTful API untuk integrasi mobile app dengan GrabFood & GoFood.</span><span class="lang-en">Designed and developed RESTful APIs for mobile app integration with GrabFood & GoFood.</span></li>
-                        <li><span class="lang-id">Mengoptimalkan (Refactoring & Improvement) API eksisting.</span><span class="lang-en">Optimized (Refactoring & Improvement) existing APIs.</span></li>
-                        <li><span class="lang-id">Mengintegrasikan layanan logistik pihak ketiga (Lalamove API).</span><span class="lang-en">Integrated third-party logistics services (Lalamove API).</span></li>
+                    <ul class="list flex-grow">
+                        <li><span class="lang-id">Integrasi mobile app dengan GrabFood, GoFood, & Lalamove API.</span><span class="lang-en">Mobile app integration with GrabFood, GoFood, & Lalamove API.</span></li>
                     </ul>
-                    <div class="tech-stack">
-                        <span>Codeigniter</span><span>Grabfood API</span><span>Gojek Food API</span><span>Lalamove
-                            API</span>
+                    <div class="tech-stack mt-auto">
+                        <span>Codeigniter</span><span>Grabfood API</span><span>Gojek Food API</span>
                     </div>
                 </div>
-
-                <div class="card reveal glass-panel">
-                    <div class="card-header">
-                        <h3>Backend Developer</h3>
-                        <span class="date"><span class="lang-id">Jan 2022 - Mar 2024</span><span class="lang-en">Jan 2022 - Mar 2024</span></span>
-                    </div>
-                    <h4 class="company">PT Kartini Indonesia</h4>
-                    <p class="location">Jakarta Selatan</p>
-                    <ul class="list">
-                        <li><span class="lang-id">Mengembangkan, memelihara, dan mengoptimalkan arsitektur sistem backend.</span><span class="lang-en">Developed, maintained, and optimized backend system architecture.</span></li>
-                        <li><span class="lang-id">Melakukan integrasi Jack API secara komprehensif.</span><span class="lang-en">Performed comprehensive Jack API integrations.</span></li>
-                        <li><span class="lang-id">Mengimplementasikan WhatsApp API untuk sistem komunikasi real-time.</span><span class="lang-en">Implemented WhatsApp API for real-time communication systems.</span></li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span>Codeigniter</span><span>Nest.js</span><span>Jack API</span><span>WhatsApp API</span>
-                    </div>
-                </div>
-
-                <div class="card reveal glass-panel">
-                    <div class="card-header">
-                        <h3>Security Engineer</h3>
-                        <span class="date"><span class="lang-id">Okt - Nov 2022</span><span class="lang-en">Oct - Nov 2022</span></span>
-                    </div>
-                    <h4 class="company">Komisi Pemberantasan Korupsi (KPK)</h4>
-                    <p class="location">Jakarta Selatan</p>
-                    <ul class="list">
-                        <li><span class="lang-id">Mengeksekusi uji ketahanan (resilience testing) pada infrastruktur sistem internal.</span><span class="lang-en">Executed resilience testing on internal system infrastructure.</span></li>
-                        <li><span class="lang-id">Menyusun laporan hasil pengujian secara komprehensif.</span><span class="lang-en">Compiled comprehensive test result reports.</span></li>
-                        <li><span class="lang-id">Merumuskan dan menetapkan standar operasional keamanan sistem.</span><span class="lang-en">Formulated and established system security operational standards.</span></li>
-                    </ul>
-                </div>
-
-                <div class="card reveal glass-panel">
-                    <div class="card-header">
-                        <h3>Security Engineer</h3>
-                        <span class="date"><span class="lang-id">Sep - Okt 2022</span><span class="lang-en">Sep - Oct 2022</span></span>
-                    </div>
-                    <h4 class="company">PT METRA-NET</h4>
-                    <p class="location">Jakarta Selatan</p>
-                    <ul class="list">
-                        <li><span class="lang-id">Melaksanakan uji ketahanan (resilience testing) dan evaluasi keamanan pada Sistem Kampus Merdeka.</span><span class="lang-en">Conducted resilience testing and security evaluations on the Kampus Merdeka System.</span></li>
-                        <li><span class="lang-id">Mengeksekusi penilaian kerentanan (vulnerability assessment).</span><span class="lang-en">Executed vulnerability assessments.</span></li>
-                        <li><span class="lang-id">Menyusun laporan hasil pengujian yang komprehensif, dilengkapi dengan panduan mitigasi.</span><span class="lang-en">Compiled comprehensive test reports complete with mitigation guidelines.</span></li>
-                    </ul>
-                </div>
-
-                <div class="card reveal glass-panel">
-                    <div class="card-header">
-                        <h3>Backend Engineer</h3>
-                        <span class="date"><span class="lang-id">Mar - Apr 2022</span><span class="lang-en">Mar - Apr 2022</span></span>
-                    </div>
-                    <h4 class="company">PT. Kreasi Sejahtera Bahagia (NLE)</h4>
-                    <p class="location">Jakarta Selatan</p>
-                    <ul class="list">
-                        <li><span class="lang-id">Mengembangkan RESTful API menggunakan PHP CodeIgniter 3 untuk live streaming Mandalika MotoGP 2022.</span><span class="lang-en">Developed RESTful APIs using PHP CodeIgniter 3 for the Mandalika MotoGP 2022 live streaming.</span></li>
-                        <li><span class="lang-id">Mengintegrasikan infrastruktur AWS untuk live streaming video.</span><span class="lang-en">Integrated AWS infrastructure for video live streaming.</span></li>
-                        <li><span class="lang-id">Mengimplementasikan Firebase untuk fitur live chat real-time.</span><span class="lang-en">Implemented Firebase for real-time live chat features.</span></li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span>Codeigniter</span><span>Firebase</span><span>AWS</span>
-                    </div>
-                </div>
-
-                <div class="card reveal glass-panel">
-                    <div class="card-header">
-                        <h3>Penetration Tester</h3>
-                        <span class="date"><span class="lang-id">Feb - Jul 2022</span><span class="lang-en">Feb - Jul 2022</span></span>
-                    </div>
-                    <h4 class="company">Tokocrypto</h4>
-                    <p class="location">Jakarta Selatan</p>
-                    <ul class="list">
-                        <li><span class="lang-id">Melaksanakan audit dan pengujian keamanan secara menyeluruh pada Sistem Internal Tokocrypto.</span><span class="lang-en">Conducted comprehensive security audits and testing on Tokocrypto's Internal Systems.</span></li>
-                        <li><span class="lang-id">Mengeksekusi pengujian kerentanan pada Smart Contract Token.</span><span class="lang-en">Executed vulnerability testing on Smart Contract Tokens.</span></li>
-                        <li><span class="lang-id">Menyusun laporan hasil pengujian dengan rekomendasi teknis mitigasi.</span><span class="lang-en">Compiled test reports with technical mitigation recommendations.</span></li>
-                    </ul>
-                </div>
-
             </div>
         </section>
 
@@ -469,122 +285,46 @@
         <section id="skills" class="section">
             <div class="section-header">
                 <h2><span class="lang-id">Kemampuan</span><span class="lang-en">Skills</span></h2>
-                <div class="line"></div>
             </div>
-            <div class="skills-container reveal">
-                <div class="skill-category glass-panel">
-                    <h3><i class="fas fa-code"></i> Programming</h3>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3>Programming</h3>
                     <div class="skill-tags">
                         <span>Go</span><span>PHP</span><span>Javascript</span><span>Python</span>
                     </div>
                 </div>
-                <div class="skill-category glass-panel">
-                    <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
+                <div class="skill-group">
+                    <h3>Frameworks</h3>
                     <div class="skill-tags">
-                        <span>React.js</span><span>Next.js</span><span>Codeigniter</span><span>Laravel</span><span>Express.js</span><span>Nest.js</span><span>Echo</span>
+                        <span>React.js</span><span>Next.js</span><span>Codeigniter</span><span>Laravel</span><span>Nest.js</span>
                     </div>
                 </div>
-                <div class="skill-category glass-panel">
-                    <h3><i class="fas fa-database"></i> Databases</h3>
+                <div class="skill-group">
+                    <h3>Databases</h3>
                     <div class="skill-tags">
                         <span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span>
                     </div>
                 </div>
-                <div class="skill-category glass-panel">
-                    <h3><i class="fas fa-shield-alt"></i> Cyber Security</h3>
+                <div class="skill-group">
+                    <h3>Cyber Security</h3>
                     <div class="skill-tags">
-                        <span>Penetration Testing</span><span>VAPT</span><span>SIEM
-                            (Wazuh)</span><span>OpenText</span><span>Cloudflare</span><span>Kali Linux</span>
+                        <span>Penetration Testing</span><span>VAPT</span><span>SIEM (Wazuh)</span><span>Cloudflare</span>
                     </div>
                 </div>
-                <div class="skill-category glass-panel">
-                    <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+                <div class="skill-group">
+                    <h3>Cloud & DevOps</h3>
                     <div class="skill-tags">
-                        <span>Google Cloud
-                            Platform</span><span>Kubernetes</span><span>ArgoCD</span><span>Proxmox</span><span>Linux</span><span>Docker</span>
-                    </div>
-                </div>
-                <div class="skill-category glass-panel">
-                    <h3><i class="fas fa-tools"></i> Tools</h3>
-                    <div class="skill-tags">
-                        <span>Github</span><span>Gitlab</span><span>Midtrans</span><span>Firebase</span><span>RouterOS</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications -->
-        <section id="certifications" class="section">
-            <div class="section-header">
-                <h2><span class="lang-id">Sertifikasi</span><span class="lang-en">Certifications</span></h2>
-                <div class="line"></div>
-            </div>
-            <div class="cert-list">
-                <div class="cert-item reveal glass-panel">
-                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
-                    <div class="cert-info">
-                        <h3>Certified Ethical Hacker (CEH)</h3>
-                        <p>EC-Council | ID: ECC3281576049</p>
-                    </div>
-                </div>
-                <div class="cert-item reveal glass-panel">
-                    <div class="cert-icon"><i class="fas fa-user-shield"></i></div>
-                    <div class="cert-info">
-                        <h3>Certified Red Team Analyst (CRTA)</h3>
-                        <p>CyberWarFare Labs | ID: CRTA-2011413</p>
-                    </div>
-                </div>
-                <div class="cert-item reveal glass-panel">
-                    <div class="cert-icon"><i class="fas fa-lock"></i></div>
-                    <div class="cert-info">
-                        <h3>Certified AppSec Practitioner (CAP)</h3>
-                        <p>The SecOps Group | ID: 6854704</p>
-                    </div>
-                </div>
-                <div class="cert-item reveal glass-panel">
-                    <div class="cert-icon"><i class="fas fa-cogs"></i></div>
-                    <div class="cert-info">
-                        <h3>Certified APIsec Practitioner (ACP)</h3>
-                        <p>APISec University</p>
-                    </div>
-                </div>
-                <div class="cert-item reveal glass-panel">
-                    <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
-                    <div class="cert-info">
-                        <h3>Certified Network Security Practitioner (CNSP)</h3>
-                        <p>The SecOps Group | ID: 7149688</p>
-                    </div>
-                </div>
-                <div class="cert-item reveal glass-panel">
-                    <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
-                    <div class="cert-info">
-                        <h3><span class="lang-id">Pengembang Perangkat Lunak</span><span class="lang-en">Software Developer</span></h3>
-                        <p>BNSP | ID: TIK1426005242023</p>
+                        <span>GCP</span><span>Kubernetes</span><span>ArgoCD</span><span>Docker</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <footer class="footer">
-            <div class="footer-content">
-                <p>&copy; 2026 Hafiz Ramadhan. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="https://github.com/rmdhfz" target="_blank" title="GitHub Profile"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/hfzrmd" target="_blank" title="LinkedIn Profile"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="mailto:hfzrmd@gmail.com" target="_blank" title="Send Email"><i
-                            class="fas fa-envelope"></i></a>
-                </div>
-            </div>
+            <p>&copy; 2026 Hafiz Ramadhan. Built with precision.</p>
         </footer>
     </main>
 
-    <!-- Vanilla Tilt for 3D UI Effects -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-
-    <!-- Custom JS -->
-    <script src="script.js?v=1.1"></script>
+    <script src="script.js?v=2.0"></script>
 </body>
-
 </html>
