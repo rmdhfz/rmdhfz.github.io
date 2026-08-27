@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="stylesheet" href="style.css?v=2.1">
 </head>
 
 <body>
@@ -54,23 +54,32 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
-                <span class="logo-box">HR</span>
-                <span class="logo-text">Hafiz Ramadhan</span>
-            </a>
+            <div class="nav-brand">
+                <div class="logo-circle">HR</div>
+                <div class="logo-text-block">
+                    <span class="logo-name">Hafiz Ramadhan</span>
+                    <span class="logo-title">SOFTWARE ENGINEER</span>
+                </div>
+            </div>
+            
             <div class="nav-pill">
                 <ul class="nav-links">
-                    <li><a href="#about"><span class="lang-id">Pendidikan</span><span class="lang-en">About</span></a></li>
+                    <li><a href="#about"><span class="lang-id">Tentang</span><span class="lang-en">About</span></a></li>
                     <li><a href="#projects"><span class="lang-id">Proyek</span><span class="lang-en">Projects</span></a></li>
                     <li><a href="#skills"><span class="lang-id">Kemampuan</span><span class="lang-en">Skills</span></a></li>
                     <li><a href="#experience"><span class="lang-id">Pengalaman</span><span class="lang-en">Experience</span></a></li>
-                    <li><a href="#certifications"><span class="lang-id">Sertifikasi</span><span class="lang-en">Certifications</span></a></li>
+                    <li><a href="#contact"><span class="lang-id">Kontak</span><span class="lang-en">Contact</span></a></li>
                 </ul>
             </div>
+            
             <div class="nav-controls">
                 <button id="lang-toggle" class="lang-btn" aria-label="Toggle Language">ID / EN</button>
                 <a href="https://github.com/rmdhfz" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/hfzrmd" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                
+                <a href="CV%20-%20Hafiz%20Ramadhan%20-%202026.pdf" target="_blank" class="btn-sm btn-outline"><i class="far fa-file-alt"></i> Resume</a>
+                <a href="#contact" class="btn-sm btn-dark">CONNECT</a>
+                
                 <div class="hamburger">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -97,7 +106,6 @@
                     
                     <div class="hero-actions">
                         <a href="#projects" class="btn btn-dark"><span class="lang-id">Eksplorasi Proyek</span><span class="lang-en">Explore Projects</span> <i class="fas fa-arrow-right"></i></a>
-                        <a href="CV%20-%20Hafiz%20Ramadhan%20-%202026.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Download CV</a>
                     </div>
                     
                     <div class="hero-stats">
@@ -138,40 +146,99 @@
             </div>
         </section>
 
-        <div class="section-divider">
-            <span class="pill-badge"><i class="far fa-user"></i> <span class="lang-id">Tentang Hafiz</span><span class="lang-en">About Hafiz</span></span>
-            <h2><span class="lang-id">Membangun sistem yang tangguh dengan presisi dan keamanan</span><span class="lang-en">Engineering robust systems with precision and security</span></h2>
-        </div>
-
-        <!-- Education -->
+        <!-- Academic Background (Education) -->
         <section id="about" class="section">
-            <div class="section-header">
-                <h2><span class="lang-id">Pendidikan</span><span class="lang-en">Education</span></h2>
+            <h2 class="section-title"><span class="lang-id">Latar Belakang Akademik</span><span class="lang-en">ACADEMIC BACKGROUND</span></h2>
+            
+            <div class="card-wide">
+                <div class="card-wide-content">
+                    <h3 class="card-wide-title">Sarjana Komputer (S.Kom) – Teknik Informatika</h3>
+                    <p class="card-wide-subtitle">Universitas Pamulang • Tangerang Selatan, Banten - Indonesia</p>
+                    <p class="card-wide-gpa font-mono">IPK 3.52 (Sangat Memuaskan)</p>
+                </div>
+                <div class="card-wide-meta">
+                    <span class="badge-year">2019 - 2023</span>
+                </div>
             </div>
-            <div class="clean-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Universitas Pamulang</h3>
-                            <span class="timeline-date">2019 - 2023</span>
-                        </div>
-                        <h4 class="subtitle"><span class="lang-id">Teknik Informatika</span><span class="lang-en">Informatics Engineering</span>, GPA 3.52/4.00</h4>
-                        <ul class="list">
-                            <li><span class="lang-id">Fokus pada Cyber Security, Software Engineering dan Project Management.</span><span class="lang-en">Focused on Cyber Security, Software Engineering, and Project Management.</span></li>
-                            <li><span class="lang-id">Lomba Gemastik XV 2022 untuk Divisi Keamanan Siber.</span><span class="lang-en">Gemastik XV 2022 Competition in the Cyber Security Division.</span></li>
-                            <li><strong><span class="lang-id">Skripsi</span><span class="lang-en">Thesis</span>:</strong> <span class="lang-id">Pengembangan Sistem Informasi ERP FTTH Studi Kasus PT Trans Hybrid Communication</span><span class="lang-en">Development of ERP Information System for FTTH (Case Study: PT Trans Hybrid Communication)</span> - <a href="https://jurnal.tau.ac.id/index.php/siskom-kb/article/view/450" target="_blank" class="text-link">Link Jurnal</a></li>
-                        </ul>
+            
+            <div class="card-wide" style="margin-top: 1rem;">
+                <div class="card-wide-content">
+                    <p class="card-wide-desc">
+                        <span class="lang-id"><strong>Fokus:</strong> Cyber Security, Software Engineering, dan Project Management. Terpilih mengikuti kompetisi Gemastik XV 2022 Divisi Keamanan Siber.</span>
+                        <span class="lang-en"><strong>Focus:</strong> Cyber Security, Software Engineering, and Project Management. Participated in the Gemastik XV 2022 Cyber Security Division competition.</span>
+                    </p>
+                    <p class="card-wide-desc mt-2">
+                        <span class="lang-id"><strong>Skripsi:</strong> Pengembangan Sistem Informasi Enterprise Resource Planning (ERP) Fiber to The Home (Studi Kasus: PT Trans Hybrid Communication). <a href="https://jurnal.tau.ac.id/index.php/siskom-kb/article/view/450" target="_blank" class="text-link">Lihat Jurnal</a></span>
+                        <span class="lang-en"><strong>Thesis:</strong> Development of ERP Information System for FTTH (Case Study: PT Trans Hybrid Communication). <a href="https://jurnal.tau.ac.id/index.php/siskom-kb/article/view/450" target="_blank" class="text-link">View Journal</a></span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certifications" class="section">
+            <h2 class="section-title"><span class="lang-id">Sertifikasi & Kredensial</span><span class="lang-en">CERTIFICATIONS & CREDENTIALS</span></h2>
+            
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <span class="issuer-text">EC-COUNCIL</span>
+                        <span class="badge-verified">Verified</span>
                     </div>
+                    <h3 class="cert-title">Certified Ethical Hacker (CEH)</h3>
+                    <p class="cert-id font-mono">ID: ECC3281576049</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <span class="issuer-text">CYBERWARFARE LABS</span>
+                        <span class="badge-verified">Verified</span>
+                    </div>
+                    <h3 class="cert-title">Certified Red Team Analyst (CRTA)</h3>
+                    <p class="cert-id font-mono">ID: CRTA-2011413</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <span class="issuer-text">THE SECOPS GROUP</span>
+                        <span class="badge-verified">Verified</span>
+                    </div>
+                    <h3 class="cert-title">Certified AppSec Practitioner (CAP)</h3>
+                    <p class="cert-id font-mono">ID: 6854704</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <span class="issuer-text">APISEC UNIVERSITY</span>
+                        <span class="badge-verified">Verified</span>
+                    </div>
+                    <h3 class="cert-title">Certified APIsec Practitioner (ACP)</h3>
+                    <p class="cert-id font-mono">ID: Verified Credential</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <span class="issuer-text">THE SECOPS GROUP</span>
+                        <span class="badge-verified">Verified</span>
+                    </div>
+                    <h3 class="cert-title">Certified Network Security Practitioner (CNSP)</h3>
+                    <p class="cert-id font-mono">ID: 7149688</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <span class="issuer-text">BADAN NASIONAL SERTIFIKASI PROFESI (BNSP)</span>
+                        <span class="badge-verified">Verified</span>
+                    </div>
+                    <h3 class="cert-title"><span class="lang-id">Pengembang Perangkat Lunak</span><span class="lang-en">Software Developer</span></h3>
+                    <p class="cert-id font-mono">ID: TIK1426005242023</p>
                 </div>
             </div>
         </section>
 
         <!-- Work Experience -->
         <section id="experience" class="section">
-            <div class="section-header">
-                <h2><span class="lang-id">Pengalaman Kerja</span><span class="lang-en">Work Experience</span></h2>
-            </div>
+            <h2 class="section-title"><span class="lang-id">PENGALAMAN KERJA</span><span class="lang-en">WORK EXPERIENCE</span></h2>
             <div class="clean-timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
@@ -244,45 +311,12 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>IT Support</h3>
-                            <span class="timeline-date"><span class="lang-id">Mei - Juli 2018</span><span class="lang-en">May - July 2018</span></span>
-                        </div>
-                        <h4 class="company">SMK Informatika Bina Generasi 2</h4>
-                        <ul class="list">
-                            <li><span class="lang-id">Memberikan dukungan teknis perangkat keras dan perangkat lunak untuk staf pengajar.</span><span class="lang-en">Provided technical support for hardware and software for teaching staff.</span></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Internship Web Developer</h3>
-                            <span class="timeline-date"><span class="lang-id">Oktober 2016 - Januari 2017</span><span class="lang-en">October 2016 - January 2017</span></span>
-                        </div>
-                        <h4 class="company">Agribisnispedia.com</h4>
-                        <ul class="list">
-                            <li><span class="lang-id">Mengembangkan website melalui WordPress dan Blogger.</span><span class="lang-en">Developed websites using WordPress and Blogger.</span></li>
-                        </ul>
-                        <div class="tech-stack mt-3">
-                            <span>Wordpress</span><span>Codeigniter</span><span>Photoshop</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
         <!-- Projects -->
         <section id="projects" class="section">
-            <div class="section-header">
-                <h2><span class="lang-id">Pengalaman Proyek (Freelance)</span><span class="lang-en">Project Experience (Freelance)</span></h2>
-            </div>
+            <h2 class="section-title"><span class="lang-id">PENGALAMAN PROYEK (FREELANCE)</span><span class="lang-en">PROJECT EXPERIENCE (FREELANCE)</span></h2>
             
             <div class="clean-grid">
                 <div class="clean-card">
@@ -308,81 +342,12 @@
                     <h4 class="company">Mahir Farm Nusantara</h4>
                     <ul class="list flex-grow">
                         <li><span class="lang-id">Merancang dan mengembangkan RESTful API yang aman.</span><span class="lang-en">Designed and developed secure RESTful APIs.</span></li>
-                        <li><span class="lang-id">Membangun arsitektur basis data untuk menangani lonjakan traffic.</span><span class="lang-en">Built database architecture to handle traffic surges.</span></li>
                     </ul>
                     <div class="tech-stack mt-auto">
                         <span>Codeigniter</span><span>MySQL</span><span>Midtrans</span>
                     </div>
                 </div>
-
-                <div class="clean-card">
-                    <div class="card-header">
-                        <h3>Backend Developer</h3>
-                        <span class="date"><span class="lang-id">Jun - Sep 2022</span><span class="lang-en">Jun - Sep 2022</span></span>
-                    </div>
-                    <h4 class="company">PT Dasa Karya Indonesia (Carinih)</h4>
-                    <ul class="list flex-grow">
-                        <li><span class="lang-id">Integrasi mobile app dengan GrabFood, GoFood, & Lalamove API.</span><span class="lang-en">Mobile app integration with GrabFood, GoFood, & Lalamove API.</span></li>
-                    </ul>
-                    <div class="tech-stack mt-auto">
-                        <span>Codeigniter</span><span>Grabfood API</span><span>Gojek Food API</span>
-                    </div>
-                </div>
-
-                <div class="clean-card">
-                    <div class="card-header">
-                        <h3>Backend Developer</h3>
-                        <span class="date"><span class="lang-id">Jan 2022 - Mar 2024</span><span class="lang-en">Jan 2022 - Mar 2024</span></span>
-                    </div>
-                    <h4 class="company">PT Kartini Indonesia</h4>
-                    <ul class="list flex-grow">
-                        <li><span class="lang-id">Mengembangkan dan memelihara sistem backend.</span><span class="lang-en">Developed and maintained backend systems.</span></li>
-                        <li><span class="lang-id">Integrasi Jack API & WhatsApp API.</span><span class="lang-en">Jack API & WhatsApp API integration.</span></li>
-                    </ul>
-                    <div class="tech-stack mt-auto">
-                        <span>Codeigniter</span><span>Nest.js</span><span>Jack API</span>
-                    </div>
-                </div>
-
-                <div class="clean-card">
-                    <div class="card-header">
-                        <h3>Security Engineer</h3>
-                        <span class="date"><span class="lang-id">Okt - Nov 2022</span><span class="lang-en">Oct - Nov 2022</span></span>
-                    </div>
-                    <h4 class="company">Komisi Pemberantasan Korupsi (KPK)</h4>
-                    <ul class="list flex-grow">
-                        <li><span class="lang-id">Mengeksekusi uji ketahanan (resilience testing) infrastruktur internal.</span><span class="lang-en">Executed resilience testing on internal infrastructure.</span></li>
-                        <li><span class="lang-id">Menetapkan standar operasional keamanan sistem.</span><span class="lang-en">Established system security operational standards.</span></li>
-                    </ul>
-                </div>
-
-                <div class="clean-card">
-                    <div class="card-header">
-                        <h3>Security Engineer</h3>
-                        <span class="date"><span class="lang-id">Sep - Okt 2022</span><span class="lang-en">Sep - Oct 2022</span></span>
-                    </div>
-                    <h4 class="company">PT METRA-NET</h4>
-                    <ul class="list flex-grow">
-                        <li><span class="lang-id">Uji ketahanan dan evaluasi keamanan pada Sistem Kampus Merdeka.</span><span class="lang-en">Resilience testing and security evaluation on Kampus Merdeka System.</span></li>
-                        <li><span class="lang-id">Mengeksekusi vulnerability assessment.</span><span class="lang-en">Executed vulnerability assessment.</span></li>
-                    </ul>
-                </div>
-
-                <div class="clean-card">
-                    <div class="card-header">
-                        <h3>Backend Engineer</h3>
-                        <span class="date"><span class="lang-id">Mar - Apr 2022</span><span class="lang-en">Mar - Apr 2022</span></span>
-                    </div>
-                    <h4 class="company">PT. Kreasi Sejahtera Bahagia (NLE)</h4>
-                    <ul class="list flex-grow">
-                        <li><span class="lang-id">Mengembangkan RESTful API untuk live streaming Mandalika MotoGP 2022.</span><span class="lang-en">Developed RESTful APIs for Mandalika MotoGP 2022 live streaming.</span></li>
-                        <li><span class="lang-id">Mengintegrasikan infrastruktur AWS.</span><span class="lang-en">Integrated AWS infrastructure.</span></li>
-                    </ul>
-                    <div class="tech-stack mt-auto">
-                        <span>Codeigniter</span><span>Firebase</span><span>AWS</span>
-                    </div>
-                </div>
-
+                
                 <div class="clean-card">
                     <div class="card-header">
                         <h3>Penetration Tester</h3>
@@ -399,9 +364,7 @@
 
         <!-- Skills -->
         <section id="skills" class="section">
-            <div class="section-header">
-                <h2><span class="lang-id">Kemampuan</span><span class="lang-en">Skills</span></h2>
-            </div>
+            <h2 class="section-title"><span class="lang-id">KEMAMPUAN</span><span class="lang-en">TECHNICAL SKILLS</span></h2>
             <div class="skills-grid">
                 <div class="skill-group">
                     <h3>Programming</h3>
@@ -435,54 +398,46 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title"><span class="lang-id">HUBUNGI SAYA</span><span class="lang-en">GET IN TOUCH</span></h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3><span class="lang-id">Mari Berkolaborasi!</span><span class="lang-en">Let's Collaborate!</span></h3>
+                    <p><span class="lang-id">Apakah Anda memiliki proyek, pertanyaan, atau sekadar ingin menyapa? Jangan ragu untuk menghubungi saya melalui form ini. Pesan Anda akan langsung terkirim ke email pribadi saya.</span><span class="lang-en">Do you have a project, a question, or just want to say hi? Feel free to drop a message using this form. Your message will be sent directly to my personal email.</span></p>
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> hfzrmd@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Bogor, <span class="lang-id">Jawa Barat</span><span class="lang-en">West Java</span> - Indonesia</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <!-- FormSubmit integration -->
+                    <form action="https://formsubmit.co/hfzrmd@gmail.com" method="POST" class="contact-form">
+                        <!-- Disable Captcha for better UX (optional) -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Success redirect page (optional, will use default if omitted) -->
+                        <input type="hidden" name="_next" value="https://rmdhfz.github.io/">
+                        <!-- Subject line -->
+                        <input type="hidden" name="_subject" value="New message from Portfolio Website!">
 
-        <!-- Certifications -->
-        <section id="certifications" class="section">
-            <div class="section-header">
-                <h2><span class="lang-id">Sertifikasi</span><span class="lang-en">Certifications</span></h2>
-            </div>
-            <div class="clean-grid">
-                <div class="clean-card" style="padding: 1.2rem; flex-direction: row; align-items: center; gap: 1rem;">
-                    <div style="font-size: 1.5rem; color: var(--accent-green);"><i class="fas fa-shield-alt"></i></div>
-                    <div>
-                        <h3 style="font-size: 1rem; font-weight: 700;">Certified Ethical Hacker (CEH)</h3>
-                        <span class="date" style="font-family: 'Fira Code', monospace; font-size: 0.75rem;">EC-Council | ID: ECC3281576049</span>
-                    </div>
-                </div>
-                <div class="clean-card" style="padding: 1.2rem; flex-direction: row; align-items: center; gap: 1rem;">
-                    <div style="font-size: 1.5rem; color: var(--accent-green);"><i class="fas fa-user-shield"></i></div>
-                    <div>
-                        <h3 style="font-size: 1rem; font-weight: 700;">Certified Red Team Analyst (CRTA)</h3>
-                        <span class="date" style="font-family: 'Fira Code', monospace; font-size: 0.75rem;">CyberWarFare Labs | ID: CRTA-2011413</span>
-                    </div>
-                </div>
-                <div class="clean-card" style="padding: 1.2rem; flex-direction: row; align-items: center; gap: 1rem;">
-                    <div style="font-size: 1.5rem; color: var(--accent-green);"><i class="fas fa-lock"></i></div>
-                    <div>
-                        <h3 style="font-size: 1rem; font-weight: 700;">Certified AppSec Practitioner (CAP)</h3>
-                        <span class="date" style="font-family: 'Fira Code', monospace; font-size: 0.75rem;">The SecOps Group | ID: 6854704</span>
-                    </div>
-                </div>
-                <div class="clean-card" style="padding: 1.2rem; flex-direction: row; align-items: center; gap: 1rem;">
-                    <div style="font-size: 1.5rem; color: var(--accent-green);"><i class="fas fa-cogs"></i></div>
-                    <div>
-                        <h3 style="font-size: 1rem; font-weight: 700;">Certified APIsec Practitioner (ACP)</h3>
-                        <span class="date" style="font-family: 'Fira Code', monospace; font-size: 0.75rem;">APISec University</span>
-                    </div>
-                </div>
-                <div class="clean-card" style="padding: 1.2rem; flex-direction: row; align-items: center; gap: 1rem;">
-                    <div style="font-size: 1.5rem; color: var(--accent-green);"><i class="fas fa-network-wired"></i></div>
-                    <div>
-                        <h3 style="font-size: 1rem; font-weight: 700;">Certified Network Security Practitioner (CNSP)</h3>
-                        <span class="date" style="font-family: 'Fira Code', monospace; font-size: 0.75rem;">The SecOps Group | ID: 7149688</span>
-                    </div>
-                </div>
-                <div class="clean-card" style="padding: 1.2rem; flex-direction: row; align-items: center; gap: 1rem;">
-                    <div style="font-size: 1.5rem; color: var(--accent-green);"><i class="fas fa-laptop-code"></i></div>
-                    <div>
-                        <h3 style="font-size: 1rem; font-weight: 700;"><span class="lang-id">Pengembang Perangkat Lunak</span><span class="lang-en">Software Developer</span></h3>
-                        <span class="date" style="font-family: 'Fira Code', monospace; font-size: 0.75rem;">BNSP | ID: TIK1426005242023</span>
-                    </div>
+                        <div class="form-group">
+                            <label for="name"><span class="lang-id">Nama Anda</span><span class="lang-en">Your Name</span></label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><span class="lang-id">Email Anda</span><span class="lang-en">Your Email</span></label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><span class="lang-id">Pesan</span><span class="lang-en">Message</span></label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Halo Hafiz..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-dark btn-submit">
+                            <span class="lang-id">Kirim Pesan</span><span class="lang-en">Send Message</span> <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -492,6 +447,6 @@
         </footer>
     </main>
 
-    <script src="script.js?v=2.0"></script>
+    <script src="script.js?v=2.1"></script>
 </body>
 </html>
